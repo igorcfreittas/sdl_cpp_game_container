@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    game_cpp:
+        container_name: game_cpp
+        build: .
+        volumes:
+            - ./app/:/home/game/
+        working_dir: /home/game/
+        command: tail -F anything
